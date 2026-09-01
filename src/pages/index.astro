@@ -1,0 +1,301 @@
+---
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="SubastParts — el ecosistema automotor donde los precios compiten. Muy pronto disponible en Google Play." />
+    <title>SubastParts — Donde los precios compiten</title>
+    <link rel="icon" type="image/webp" href="/assets/subastparts-logo.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,800&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="stage">
+      <div class="bg-image" aria-hidden="true"></div>
+      <div class="bg-vignette" aria-hidden="true"></div>
+      <div class="bg-glow" aria-hidden="true"></div>
+
+      <section class="content">
+        <div class="logo-wrap">
+          <div class="logo-halo" aria-hidden="true"></div>
+          <img
+            class="logo"
+            src="/assets/subastparts-logo.webp"
+            alt="SubastParts"
+            width="220"
+            height="220"
+          />
+        </div>
+
+        <h1 class="brand">
+          <span class="brand-subast">Subast</span><span class="brand-parts">Parts</span>
+        </h1>
+
+        <p class="tagline">Donde los precios compiten</p>
+
+        <div class="divider" aria-hidden="true"></div>
+
+        <p class="eyebrow">Ecosistema automotor</p>
+
+        <button class="cta" type="button" aria-label="Descárgala ahora en Google Play">
+          <span class="cta-icon">
+            <img src="/assets/playstore-icon.webp" alt="" width="22" height="22" />
+          </span>
+          <span class="cta-text">
+            <span class="cta-small">Disponible próximamente en</span>
+            <span class="cta-big">Google Play Store</span>
+          </span>
+        </button>
+      </section>
+
+      <footer class="foot">
+        <p>&copy; 2026 SubastParts. Todos los derechos reservados.</p>
+      </footer>
+    </main>
+  </body>
+</html>
+
+<style>
+  :root {
+    --blue-accent: #a0cafd;
+    --blue-accent-soft: rgba(160, 202, 253, 0.55);
+    --ink: #f5f8ff;
+    --muted: rgba(226, 235, 255, 0.62);
+    --faint: rgba(226, 235, 255, 0.38);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    color: var(--ink);
+    background: #050a16;
+  }
+
+  .stage {
+    position: relative;
+    min-height: 100dvh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bg-image {
+    position: absolute;
+    inset: 0;
+    background: url("/assets/background-init.webp") center center / cover no-repeat;
+    z-index: 0;
+  }
+
+  /* Depth vignette: darkens the edges so the center reads as the focal point */
+  .bg-vignette {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(5, 10, 22, 0) 0%,
+      rgba(5, 10, 22, 0.25) 55%,
+      rgba(5, 10, 22, 0.78) 100%
+    );
+  }
+
+  /* Soft light bloom sitting behind the logo for a modern, dimensional feel */
+  .bg-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: min(70vw, 620px);
+    height: min(70vw, 620px);
+    transform: translate(-50%, -58%);
+    background: radial-gradient(
+      circle,
+      rgba(160, 202, 253, 0.22) 0%,
+      rgba(90, 140, 220, 0.1) 40%,
+      rgba(90, 140, 220, 0) 72%
+    );
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: clamp(2rem, 6vw, 3.5rem) 1.5rem;
+    text-align: center;
+  }
+
+  .logo-wrap {
+    position: relative;
+    display: grid;
+    place-items: center;
+    margin-bottom: 0px;
+  }
+
+  .logo-halo {
+    position: absolute;
+    width: 190%;
+    height: 190%;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle,
+      rgba(160, 202, 253, 0.28) 0%,
+      rgba(160, 202, 253, 0) 70%
+    );
+    filter: blur(4px);
+  }
+
+  .logo {
+    position: relative;
+    width: clamp(96px, 22vw, 148px);
+    height: auto;
+    filter: drop-shadow(0 18px 40px rgba(0, 10, 40, 0.55));
+  }
+
+  .brand {
+    margin: 0;
+    font-family: "Inter", "Poppins", system-ui, sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size: clamp(2rem, 6.4vw, 2.9rem);
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+
+  .brand-subast {
+    color: #ffffff;
+  }
+
+  .brand-parts {
+    color: #1e88e5;
+  }
+
+  .tagline {
+    margin: clamp(0.6rem, 2vw, 0.85rem) 0 0;
+    font-family: "Poppins", "Inter", system-ui, sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: clamp(0.95rem, 2.6vw, 1.15rem);
+    letter-spacing: 0.02em;
+    color: var(--muted);
+  }
+
+  .divider {
+    width: min(220px, 60vw);
+    height: 1px;
+    margin: clamp(0.4rem, 1.2vw, 0.6rem) auto;
+    background: linear-gradient(
+      90deg,
+      rgba(226, 235, 255, 0) 0%,
+      rgba(226, 235, 255, 0.55) 50%,
+      rgba(226, 235, 255, 0) 100%
+    );
+  }
+
+  .eyebrow {
+    margin: 0 0 clamp(1.8rem, 5vw, 2.4rem);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--faint);
+  }
+
+  .cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.7rem 1.6rem 0.7rem 0.7rem;
+    border-radius: 999px;
+    border: 1px solid rgba(160, 202, 253, 0.35);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+    backdrop-filter: blur(6px);
+    box-shadow: 0 12px 30px rgba(0, 8, 30, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    color: inherit;
+    font-family: inherit;
+  }
+
+  .cta:hover {
+    transform: translateY(-2px);
+    border-color: rgba(160, 202, 253, 0.7);
+    box-shadow: 0 16px 36px rgba(0, 8, 30, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  }
+
+  .cta:active {
+    transform: translateY(0);
+  }
+
+  .cta-icon {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.94);
+    flex-shrink: 0;
+  }
+
+  .cta-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.15;
+  }
+
+  .cta-small {
+    font-size: 0.65rem;
+    letter-spacing: 0.04em;
+    color: var(--faint);
+  }
+
+  .cta-big {
+    font-family: "Poppins", "Inter", system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #ffffff;
+  }
+
+  .foot {
+    position: relative;
+    z-index: 2;
+    padding: 1.25rem 1rem calc(1.25rem + env(safe-area-inset-bottom));
+  }
+
+  .foot p {
+    margin: 0;
+    font-size: 0.7rem;
+    letter-spacing: 0.03em;
+    color: rgba(226, 235, 255, 0.3);
+  }
+
+  @media (max-height: 640px) {
+    .stage {
+      justify-content: flex-start;
+      padding-top: 4vh;
+    }
+  }
+</style>
